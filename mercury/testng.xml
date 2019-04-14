@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Login">
+    <classes>
+      <class name="mercury.testcases.LoginTest"/>
+     </classes>
+  </test> <!-- Test -->
+  <test name="register">
+    <classes>
+      <class name="mercury.testcases.RegisterTest"/>
+    </classes>
+  </test> 
+</suite> <!-- Suite -->

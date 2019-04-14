@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Login(failed)">
+    <classes>
+      <class name="mercury.testcases.LoginTest">
+        <methods>
+          <include name="validLoginTest" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="startup"/>
+        </methods>
+      </class> <!-- mercury.testcases.LoginTest -->
+    </classes>
+  </test> <!-- Login(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 36.819 sec <<< FAILURE!
+test(mercury.testcases.End2EndTest)  Time elapsed: 0.062 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at mercury.pages.BookAFlightPage.Loginandcredentials(BookAFlightPage.java:27)
+	at mercury.testcases.End2EndTest.test(End2EndTest.java:14)
+
