@@ -22,7 +22,8 @@ public class BookAFlightPage  {
 	
 		
 		
-    //This method has login credentials as well as Next page button to enter the BOOK A FLIGHT page 
+    //This method has login credentials as well as Next page button to enter the BOOK A FLIGHT page
+	//i need to merge all the method in a single method
 	public void Loginandcredentials(String username,String password) {
 	ExtentTest test = extent.createTest("test");
 	SeleniumUtil.senkeys(driver.findElement(By.xpath("//input[@name='userName']")),test,"mercury", username);
