@@ -34,7 +34,7 @@ public class TestBase {
 		driver.close();
 		extent.flush();
 	}
-//	
+	
 	public static void extentReport() {
 		ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(System.getProperty("user.dir")+"\\src\\test\\resources\\extentReport\\TestResult.html");
 		

@@ -35,6 +35,22 @@ public class SeleniumUtil {
 		log.info("Value dropped down "+elementName+" successfully");
 		
 	}
+	
+	public static void dropdown(WebElement element,ExtentTest test,String value, String elementName) {
+		Select exp = new Select(element);
+		exp.selectByValue(value);
+		test.log(Status.INFO,"Value dropped down "+elementName+" successfully");
+		log.info("Value dropped down "+elementName+" successfully");
+		
+	}
+	public static void dropdown(WebElement element,String value, ExtentTest test, String elementName) {
+		Select exp = new Select(element);
+		exp.selectByVisibleText(value);
+		test.log(Status.INFO,"Value dropped down "+elementName+" successfully");
+		log.info("Value dropped down "+elementName+" successfully");
+		
+	}
+	
 	//clear
 	
 	public static  void clear(WebElement element,ExtentTest test,String elementName) {
