@@ -1,4 +1,3 @@
-mercury\pages\SelectFlightPage.class
 mercury\testbase\TestBase.class
 mercury\pages\BookAFlightPage.class
 mercury\pages\LoginPage.class

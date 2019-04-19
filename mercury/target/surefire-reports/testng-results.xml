@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="1" ignored="4" total="7" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Command line suite" duration-ms="18692" started-at="2019-04-14T06:01:58Z" finished-at="2019-04-14T06:02:17Z">
+  <suite name="Command line suite" duration-ms="14028" started-at="2019-04-16T18:22:39Z" finished-at="2019-04-16T18:22:53Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="18692" started-at="2019-04-14T06:01:58Z" finished-at="2019-04-14T06:02:17Z">
+    <test name="Command line test" duration-ms="14028" started-at="2019-04-16T18:22:39Z" finished-at="2019-04-16T18:22:53Z">
       <class name="mercury.testcases.End2EndTest">
-        <test-method status="PASS" signature="startup()[pri:0, instance:mercury.testcases.End2EndTest@26653222]" name="startup" is-config="true" duration-ms="16159" started-at="2019-04-14T06:01:42Z" finished-at="2019-04-14T06:01:58Z">
+        <test-method status="PASS" signature="startup()[pri:0, instance:mercury.testcases.End2EndTest@3532ec19]" name="startup" is-config="true" duration-ms="8613" started-at="2019-04-16T18:22:30Z" finished-at="2019-04-16T18:22:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startup -->
-        <test-method status="FAIL" signature="test()[pri:0, instance:mercury.testcases.End2EndTest@26653222]" name="test" duration-ms="31" started-at="2019-04-14T06:01:58Z" finished-at="2019-04-14T06:01:58Z">
+        <test-method status="FAIL" signature="test()[pri:0, instance:mercury.testcases.End2EndTest@3532ec19]" name="test" duration-ms="2" started-at="2019-04-16T18:22:39Z" finished-at="2019-04-16T18:22:39Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-at mercury.pages.BookAFlightPage.Loginandcredentials(BookAFlightPage.java:27)
+at mercury.pages.BookAFlightPage.Loginandcredentials(BookAFlightPage.java:28)
 at mercury.testcases.End2EndTest.test(End2EndTest.java:14)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -58,13 +58,13 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:mercury.testcases.End2EndTest@26653222]" name="tearDown" is-config="true" duration-ms="976" started-at="2019-04-14T06:02:17Z" finished-at="2019-04-14T06:02:18Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:mercury.testcases.End2EndTest@3532ec19]" name="tearDown" is-config="true" duration-ms="821" started-at="2019-04-16T18:22:53Z" finished-at="2019-04-16T18:22:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- mercury.testcases.End2EndTest -->
       <class name="mercury.testcases.RegisterTest">
-        <test-method status="PASS" signature="registerTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:mercury.testcases.RegisterTest@68c4039c]" name="registerTest" duration-ms="6466" started-at="2019-04-14T06:02:11Z" data-provider="registerData" finished-at="2019-04-14T06:02:17Z">
+        <test-method status="PASS" signature="registerTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:mercury.testcases.RegisterTest@ae45eb6]" name="registerTest" duration-ms="4992" started-at="2019-04-16T18:22:48Z" data-provider="registerData" finished-at="2019-04-16T18:22:53Z">
           <params>
             <param index="0">
               <value>
@@ -107,7 +107,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
         </test-method> <!-- registerTest -->
       </class> <!-- mercury.testcases.RegisterTest -->
       <class name="mercury.testcases.LoginTest">
-        <test-method status="PASS" signature="validLoginTest(java.lang.String, java.lang.String)[pri:0, instance:mercury.testcases.LoginTest@3532ec19]" name="validLoginTest" duration-ms="7125" started-at="2019-04-14T06:02:03Z" data-provider="loginData" finished-at="2019-04-14T06:02:10Z">
+        <test-method status="PASS" signature="validLoginTest(java.lang.String, java.lang.String)[pri:0, instance:mercury.testcases.LoginTest@68c4039c]" name="validLoginTest" duration-ms="7768" started-at="2019-04-16T18:22:40Z" data-provider="loginData" finished-at="2019-04-16T18:22:48Z">
           <params>
             <param index="0">
               <value>

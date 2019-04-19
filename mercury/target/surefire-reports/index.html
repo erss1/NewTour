@@ -148,7 +148,7 @@
                   </a> <!-- test -->
                   <span class="method-name">test</span>
                   <div class="stack-trace">java.lang.NullPointerException
-	at mercury.pages.BookAFlightPage.Loginandcredentials(BookAFlightPage.java:27)
+	at mercury.pages.BookAFlightPage.Loginandcredentials(BookAFlightPage.java:28)
 	at mercury.testcases.End2EndTest.test(End2EndTest.java:14)
 ... Removed 35 stack frames
 </div> <!-- stack-trace -->
@@ -156,22 +156,6 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Command_line_suite-class-failed -->
-          <div class="suite-Command_line_suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">mercury.testcases.RegisterTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="registerTest(Sujoy, Kumar, 8585951996, Sujoy@gmail.com, Sujoy1, Sujoy#123, Sujoy#123)">
-                  </a> <!-- registerTest(Sujoy, Kumar, 8585951996, Sujoy@gmail.com, Sujoy1, Sujoy#123, Sujoy#123) -->
-                  <span class="method-name">registerTest</span>
-                  <span class="parameters">(Sujoy, Kumar, 8585951996, Sujoy@gmail.com, Sujoy1, Sujoy#123, Sujoy#123)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Command_line_suite-class-passed -->
           <div class="suite-Command_line_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -188,6 +172,22 @@
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Command_line_suite-class-passed -->
+          <div class="suite-Command_line_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">mercury.testcases.RegisterTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="registerTest(Sujoy, Kumar, 8585951996, Sujoy@gmail.com, Sujoy1, Sujoy#123, Sujoy#123)">
+                  </a> <!-- registerTest(Sujoy, Kumar, 8585951996, Sujoy@gmail.com, Sujoy1, Sujoy#123, Sujoy#123) -->
+                  <span class="method-name">registerTest</span>
+                  <span class="parameters">(Sujoy, Kumar, 8585951996, Sujoy@gmail.com, Sujoy1, Sujoy#123, Sujoy#123)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Command_line_suite-class-passed -->
         </div> <!-- panel Command_line_suite -->
         <div panel-name="test-xml-Command_line_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -199,6 +199,7 @@
 &lt;suite verbose=&quot;0&quot; name=&quot;Command line suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;Command line test&quot;&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;mercury.testcases.BookaflightTest&quot;/&gt;
       &lt;class name=&quot;mercury.testcases.End2EndTest&quot;/&gt;
       &lt;class name=&quot;mercury.testcases.LoginTest&quot;/&gt;
       &lt;class name=&quot;mercury.testcases.RegisterTest&quot;/&gt;
@@ -216,7 +217,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Command line test (4 classes)</span>
+                <span class="test-name">Command line test (5 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -246,20 +247,20 @@ data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'validLoginTest')
 data.setCell(0, 2, 'mercury.testcases.LoginTest')
-data.setCell(0, 3, 7125);
+data.setCell(0, 3, 7768);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'registerTest')
 data.setCell(1, 2, 'mercury.testcases.RegisterTest')
-data.setCell(1, 3, 6466);
+data.setCell(1, 3, 4992);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'test')
 data.setCell(2, 2, 'mercury.testcases.End2EndTest')
-data.setCell(2, 3, 31);
+data.setCell(2, 3, 2);
 window.suiteTableData['Command_line_suite']= { tableData: data, tableDiv: 'times-div-Command_line_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 13 seconds</span>
+              <span class="suite-total-time">Total running time: 12 seconds</span>
               <div id="times-div-Command_line_suite">
               </div> <!-- times-div-Command_line_suite -->
             </div> <!-- times-div -->
@@ -312,28 +313,28 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">test</span>
-                <span class="method-start">16253 ms</span>
+                <span class="method-start">8636 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">mercury.testcases.LoginTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">validLoginTest(mercury, mercury)</span>
-                <span class="method-start">21153 ms</span>
+                <span class="method-start">9742 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">mercury.testcases.RegisterTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">registerTest(Sujoy, Kumar, 8585951996, Sujoy@gmail.com, Sujoy1, Sujoy#123, Sujoy#123)</span>
-                <span class="method-start">28385 ms</span>
+                <span class="method-start">17649 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">mercury.testcases.End2EndTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">34999 ms</span>
+                <span class="method-start">22688 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

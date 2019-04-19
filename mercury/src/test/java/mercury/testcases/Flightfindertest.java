@@ -23,15 +23,20 @@ return data;
 	}
 	
 	@Test(dataProvider="loginData")
-public void flightfinder(String passengers, String departingfrom, String onmonth,String onyear, String arrivingin, 
+public  void  flightfinder(String passengers, String departingfrom, String onmonth,String onyear, String arrivingin, 
 		String returningmonth, String returningyear,String airline) throws Exception {
 		ExtentTest test = extent.createTest("Flightfindertest");
 		
 	LoginPage.login(driver,"mercury","mercury");
 		  
 	Thread.sleep(2000);
-	FlightFinderPage.flightfinder(driver,test,passengers, departingfrom, onmonth, onyear, 
-	arrivingin, returningmonth, returningyear, airline);
+	FlightFinderPage.flightfinder(driver, test, passengers, departingfrom, onmonth, onyear, arrivingin,
+		returningmonth, returningyear, airline);
+		
 	
+		
 	}
-}
+	
+
+	}
+

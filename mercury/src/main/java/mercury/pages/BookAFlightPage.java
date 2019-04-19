@@ -1,5 +1,8 @@
 package mercury.pages;
 
+import java.io.FileInputStream;
+import java.util.Properties;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -23,15 +26,7 @@ public class BookAFlightPage  {
 		
 		
     //This method has login credentials as well as Next page button to enter the BOOK A FLIGHT page
-	//i need to merge all the method in a single method
-	public void Loginandcredentials(String username,String password) {
-	ExtentTest test = extent.createTest("test");
-	SeleniumUtil.senkeys(driver.findElement(By.xpath("//input[@name='userName']")),test,"mercury", username);
-	SeleniumUtil.senkeys(driver.findElement(By.xpath("//input[@name='password']")),test,"mercury", password);
-	SeleniumUtil.click(driver.findElement(By.xpath("//input[@name='login']")), test,"login");	
-	SeleniumUtil.click(driver.findElement(By.xpath("//input[contains(@name,'findFlights')]")),test,"continuefrom1stpage");
-	SeleniumUtil.click(driver.findElement(By.xpath("//input[contains(@name,'reserveFlights')]")),test,"continuefrom2ndpage");
-		} 
+	//i need to merge all the method in a single me
 			
 	// This method is for extent report and this optional when we merge the code for END to END test
 	public static  void extentReport() {
@@ -42,54 +37,53 @@ public class BookAFlightPage  {
 	}
 	   	
 	//This method has all the details of PASSENGER and CREDIT CARD
-	public  void passengerandcarddetails(String FirstName, String LastName,int meal, int cardtype , 
-	String Number, int monthExpire, int yearExpire, String Nameoncard,String Midnameoncard,String lastnameoncard) {
-	ExtentTest test = extent.createTest("passengerandcarddetails");
-	SeleniumUtil.senkeys(driver.findElement(By.xpath("//input[@name='passFirst0']")), test,"FirstName",FirstName);
-	SeleniumUtil.senkeys(driver.findElement(By.xpath("//input[@name='passLast0']")),test,"LastName", LastName);
-	SeleniumUtil.dropdown(driver.findElement(By.xpath("//select[contains(@name,'pass.0.meal')]")),test,meal, "meal");
-	SeleniumUtil.dropdown(driver.findElement(By.xpath("//select[contains(@name,'creditCard')]")),test, cardtype,"Cardtype");
-	SeleniumUtil.senkeys(driver.findElement(By.xpath("//input[@name='creditnumber']")),test,"Number",Number);
-	SeleniumUtil.dropdown(driver.findElement(By.xpath("//select[contains(@name,'cc_exp_dt_mn')]")),test, monthExpire,"expired month");
-	SeleniumUtil.dropdown(driver.findElement(By.xpath("//select[contains(@name,'cc_exp_dt_yr')]")),test,yearExpire,"expired year");
-	SeleniumUtil.senkeys(driver.findElement(By.xpath("(//input[contains(@type,'TEXT')])[1]")),test,"Smily",Nameoncard);
-	SeleniumUtil.senkeys(driver.findElement(By.xpath("(//input[contains(@type,'TEXT')])[2]")),test,"Smile", Midnameoncard);
-	SeleniumUtil.senkeys(driver.findElement(By.xpath("(//input[contains(@type,'TEXT')])[3]")),test,"Sood", lastnameoncard);
-	SeleniumUtil.click(driver.findElement(By.xpath("(//input[contains(@name,'ticketLess')])[1]")),test,"Ticketless");
+	public static void passengerandcarddetails(WebDriver driver, ExtentTest test,String FirstName, 
+	String LastName,String meal, String cardtype ,String Number, String monthExpire, String yearExpire,
+	String Nameoncard,String Midnameoncard,String lastnameoncard,String Address1stline,String Address2ndline, 
+	String city, String state, String postalcode, String country, String deladd1 ,String deladd2,String delcity,
+	String delstate, String delpostal,String delcountry) throws Exception {
+	Properties book = new Properties();
+	FileInputStream flight =new FileInputStream(System.getProperty("user.dir") + "//src//test//resources//pageObjects//BookAFlight.properties");
+	book.load(flight);
+	SeleniumUtil.senkeys(driver.findElement(By.xpath(book.getProperty("FirstName"))), test,FirstName,"FirstName");
+	SeleniumUtil.senkeys(driver.findElement(By.xpath(book.getProperty("LastName"))),test, LastName,"LastName");
+	SeleniumUtil.dropdown(driver.findElement(By.xpath(book.getProperty("Meal"))),meal,test,"meal");
+	SeleniumUtil.dropdown(driver.findElement(By.xpath(book.getProperty("CardType"))),cardtype,test,"Cardtype");
+	SeleniumUtil.senkeys(driver.findElement(By.xpath(book.getProperty("Number"))),test,"Number",Number);
+	SeleniumUtil.dropdown(driver.findElement(By.xpath(book.getProperty("Expiration1"))), monthExpire,test,"expired month");
+	SeleniumUtil.dropdown(driver.findElement(By.xpath(book.getProperty("Expiration2"))),yearExpire,test,"expired year");
+	SeleniumUtil.senkeys(driver.findElement(By.xpath(book.getProperty("CardFirstName"))),test,"Smily",Nameoncard);
+	SeleniumUtil.senkeys(driver.findElement(By.xpath(book.getProperty("CardMiddleName"))),test,"Smile", Midnameoncard);
+	SeleniumUtil.senkeys(driver.findElement(By.xpath(book.getProperty("CardLastName"))),test,"Sood", lastnameoncard);
+	SeleniumUtil.click(driver.findElement(By.xpath(book.getProperty("TicketlessTravel"))),test,"Ticketless");
 	
-	}
-    //This is  the second method of BOOKAFLIGHT PAGE. 
-	//This method contains all the Information of BILLING ADDRESS and DELIVERY ADDRESS
-	public static void bilanddeladd(String Address1stline,String Address2ndline, String city, String state, 
-	String postalcode, int country, String deladd1 ,String deladd2,String delcity, String delstate, 
-	String delpostal,int delcountry) {
-	ExtentTest test = extent.createTest("bilanddeladd");
-	SeleniumUtil.clear(driver.findElement(By.xpath("//input[contains(@name,'billAddress1')]")),test,"Address1");
-	SeleniumUtil.senkeys(driver.findElement(By.xpath("//input[contains(@name,'billAddress1')]")),test,"Address1stline", Address1stline);
-	SeleniumUtil.clear(driver.findElement(By.xpath("//input[contains(@name,'billAddress2')]")),test,"Address2");
-	SeleniumUtil.senkeys(driver.findElement(By.xpath("//input[contains(@name,'billAddress2')]")),test,"Address2ndline",Address2ndline);
-	SeleniumUtil.clear(driver.findElement(By.xpath("//input[contains(@name,'billCity')]")),test,"city");
-	SeleniumUtil.senkeys(driver.findElement(By.xpath("//input[contains(@name,'billCity')]")),test,"city", city);
-	SeleniumUtil.clear(driver.findElement(By.xpath("//input[contains(@name,'billState')]")),test,"state");
-	SeleniumUtil.senkeys(driver.findElement(By.xpath("//input[contains(@name,'billState')]")),test,"state", state);
-	SeleniumUtil.clear(driver.findElement(By.xpath("//input[contains(@name,'billZip')]")),test,"ZipCode");
-	SeleniumUtil.senkeys(driver.findElement(By.xpath("//input[contains(@name,'billZip')]")),test,"ZipCode", postalcode);
-	SeleniumUtil.dropdown(driver.findElement(By.xpath("//select[contains(@name,'billCountry')]")),test,country, "country");
-	SeleniumUtil.click(driver.findElement(By.xpath("(//input[contains(@name,'ticketLess')])[2]")),test,"sameasbillingadd");
-	SeleniumUtil.clear(driver.findElement(By.xpath("//input[contains(@name,'delAddress1')]")),test,"delAddress");
-    SeleniumUtil.senkeys(driver.findElement(By.xpath("//input[contains(@name,'delAddress1')]")),test,deladd1,"delAddress");
-    SeleniumUtil.senkeys(driver.findElement(By.xpath("//input[contains(@name,'delAddress2')]")),test,deladd2,"delAddress2");
-    SeleniumUtil.clear(driver.findElement(By.xpath("//input[contains(@name,'delCity')]")),test,"city");
-    SeleniumUtil.senkeys(driver.findElement(By.xpath("//input[contains(@name,'delCity')]")),test,delcity,"delcity");
-    SeleniumUtil.clear(driver.findElement(By.xpath("//input[contains(@name,'delState')]")),test,"delState");
-    SeleniumUtil.senkeys(driver.findElement(By.xpath("//input[contains(@name,'delState')]")),test,delstate,"delState");
-    SeleniumUtil.clear(driver.findElement(By.xpath("//input[contains(@name,'delZip')]")),test,"Zipcode");
-    SeleniumUtil.senkeys(driver.findElement(By.xpath("//input[contains(@name,'delZip')]")),test,"Zipcode", delpostal);
-    SeleniumUtil.dropdown(driver.findElement(By.xpath("//select[contains(@name,'delCountry')]")),test, delcountry,"delcountry");
+	SeleniumUtil.clear(driver.findElement(By.xpath(book.getProperty("Address1"))),test,"Address1");
+	SeleniumUtil.senkeys(driver.findElement(By.xpath(book.getProperty("Address1"))),test, Address1stline,"Address1stline");
+	SeleniumUtil.clear(driver.findElement(By.xpath(book.getProperty("Address2"))),test,"Address2");
+	SeleniumUtil.senkeys(driver.findElement(By.xpath(book.getProperty("Address2"))),test,Address2ndline,"Address2ndline");
+	SeleniumUtil.clear(driver.findElement(By.xpath(book.getProperty("City"))),test,"city");
+	SeleniumUtil.senkeys(driver.findElement(By.xpath(book.getProperty("City"))),test, city,"city");
+	SeleniumUtil.clear(driver.findElement(By.xpath(book.getProperty("StateProvince"))),test,"state");
+	SeleniumUtil.senkeys(driver.findElement(By.xpath(book.getProperty("StateProvince"))),test, state,"state");
+	SeleniumUtil.clear(driver.findElement(By.xpath(book.getProperty("PostalCode"))),test,"ZipCode");
+	SeleniumUtil.senkeys(driver.findElement(By.xpath(book.getProperty("PostalCode"))),test, postalcode,"ZipCode");
+	SeleniumUtil.dropdown(driver.findElement(By.xpath(book.getProperty("Country"))),country,test, "Country");
+	SeleniumUtil.click(driver.findElement(By.xpath(book.getProperty("SameBillingAddress"))),test,"sameasbillingadd");
+	SeleniumUtil.clear(driver.findElement(By.xpath(book.getProperty("Address1del"))),test,"delAddress");
+    SeleniumUtil.senkeys(driver.findElement(By.xpath(book.getProperty("Address1del"))),test,deladd1,"delAddress");
+    SeleniumUtil.senkeys(driver.findElement(By.xpath(book.getProperty("Address2del"))),test,deladd2,"delAddress2");
+    SeleniumUtil.clear(driver.findElement(By.xpath(book.getProperty("Citydel"))),test,"city");
+    SeleniumUtil.senkeys(driver.findElement(By.xpath(book.getProperty("Citydel"))),test,delcity,"delcity");
+    SeleniumUtil.clear(driver.findElement(By.xpath(book.getProperty("State"))),test,"delState");
+    SeleniumUtil.senkeys(driver.findElement(By.xpath(book.getProperty("State"))),test,delstate,"delState");
+    SeleniumUtil.clear(driver.findElement(By.xpath(book.getProperty("Postal"))),test,"Zipcode");
+    SeleniumUtil.senkeys(driver.findElement(By.xpath(book.getProperty("Postal"))),test, delpostal,"Zipcode");
+  
+    SeleniumUtil.dropdown(driver.findElement(By.xpath(book.getProperty("Countrydel"))), delcountry,test,"delcountry");
+    Thread.sleep(1000);
     driver.switchTo().alert().accept();
-	SeleniumUtil.click(driver.findElement(By.xpath("//input[contains(@name,'buyFlights')]")),test,"buyFlight");
-	}
-		
-		
+	SeleniumUtil.click(driver.findElement(By.xpath(book.getProperty("buyflight"))),test,"buyFlight");
+	
+}
 		
 }

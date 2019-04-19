@@ -38,8 +38,6 @@ SeleniumUtil.click(driver.findElement(By.xpath(obj.getProperty("businessclass"))
 SeleniumUtil.click(driver.findElement(By.xpath(obj.getProperty("firstclass"))), test, "firstclass");
 SeleniumUtil.dropdown(driver.findElement(By.xpath(obj.getProperty("airline"))),airline, test,  "airline");
 SeleniumUtil.click(driver.findElement(By.xpath(obj.getProperty("continue"))), test, "continue");
-
-
 		
 	}
 }
